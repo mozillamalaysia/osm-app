@@ -1,0 +1,10 @@
+* Basic App layout
+* Add leafletjs library
+* Show map 
+* Add install button 
+* Fetch location from device and center map 
+* Notification Splash screen about data 
+* About the app: Dude, Where is my OSM map? and love for opensource
+* OSM editing with .editInOSM plugin
+* Cache tiles locally with .Pouch or .FunctionalTileLayer 
+* Add a POI and submit it to OSM server 
