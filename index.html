@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/leaflet.css"/>    
     <link rel="stylesheet" type="text/css" href="css/Leaflet.EditInOSM.css"/>
+    <link rel="stylesheet" type="text/css" href="css/L.Control.Locate.css"/>
     <script type="text/javascript" src="js/leaflet.js"></script>
     <script type="text/javascript" src="js/Leaflet.EditInOSM.js"></script>
+    <script type="text/javascript" src="js/L.Control.Locate.js"></script>
 <style>
   body {
   padding: 0;
@@ -50,6 +52,12 @@
    map.on('locationerror', onLocationError);
 
    map.locate({setView: true, maxZoom: 16});
+
+   // Add locate button 
+   L.control.locate({
+      'follow': true,
+      stopFollowingOnDrag: true
+   }).addTo(map);
 
  </script>
 </body>
