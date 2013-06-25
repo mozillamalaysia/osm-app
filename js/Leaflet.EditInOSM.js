@@ -3,11 +3,7 @@ L.Control.EditInOSM = L.Control.extend({
     options: {
         position: "topright",
         editors: {
-            JOSM: {
-                url: 'http://127.0.0.1:8111/load_and_zoom',
-                timeout: 1000
-            },
-            iD: {
+           iD: {
                 url: 'http://openstreetmap.us/iD/release/#map='
             },
             potlatch: {
@@ -43,7 +39,7 @@ L.Control.EditInOSM = L.Control.extend({
     addItem: function (container, name) {
         var editor = this.options.editors[name];
         var link = L.DomUtil.create('a', "osm-editor", container);
-        link.href = 'http://openstreetmap.us/iD/release/#map=';
+        link.href = '#';
         link.innerHTML = editor.name || name;
         L.DomEvent
             .on(link, "click", L.DomEvent.stop)
