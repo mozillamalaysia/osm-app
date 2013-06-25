@@ -43,7 +43,7 @@ L.Control.EditInOSM = L.Control.extend({
     addItem: function (container, name) {
         var editor = this.options.editors[name];
         var link = L.DomUtil.create('a', "osm-editor", container);
-        link.href = '#';
+        link.href = 'http://openstreetmap.us/iD/release/#map=';
         link.innerHTML = editor.name || name;
         L.DomEvent
             .on(link, "click", L.DomEvent.stop)
