@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html>
-<!-- 
-    Exchange the line above for this to enable offline support
-    <html manifest="manifest.appcache">
-
-    Please make your homework before doing this:
-        http://www.alistapart.com/articles/application-cache-is-a-douchebag/
-        http://appcachefacts.info
-    
- -->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css"/>    
     <script type="text/javascript" src="js/leaflet.js"></script>
-
+<style>
+  body {
+  padding: 0;
+  margin: 0;
+  }
+  html, body, #map {
+  height: 100%;
+  }
+  </style>
 <title>OpenStreetMaps App</title>
 </head>
 <body>
-    <header>
-        <h1>OpenStreetMaps App</h1> 
-        <div id="install">
-            <button>Install</button>
-        </div>
-
-        <!-- Icon that will indicate whether you are online or offline - enabled if you are using offline/appcache (see above) -->
-        <div id="online-status" title="Online"></div>
-    </header>
-
-<div id="main">
  <div id="map"></div>
  <script>
    var map = L.map('map');
@@ -57,17 +45,5 @@
    map.locate({setView: true, maxZoom: 16});
 
  </script>
-</div>
-    <footer>
-    </footer>
-
-    <script type="text/javascript" src="js/base.js"></script>
-    <script type="text/javascript" src="js/webapp.js"></script>
-    <script type="text/javascript" src="js/offline.js"></script>
-    <!-- 
-        Loosely based on fxosstub: https://github.com/Jaxo/fxosstub
-        Loosely based on Firefox-OS-Boilerplate-App: https://github.com/robnyman/Firefox-OS-Boilerplate-App
-    -->
-
 </body>
 </html>
