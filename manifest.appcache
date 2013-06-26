@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# Version 0.6799999
+
+index.html
+css/base.css
+css/leaflet.css
+js/base.js
+js/webapp.js
+js/offline.js
+js/leaflet-src.js
+js/leaflet.js
+
+NETWORK:
+*
+
+FALLBACK:
+/ fallback.html

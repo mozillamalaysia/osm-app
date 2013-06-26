@@ -1,0 +1,9 @@
+{
+    "name": "OSM App",
+    "package_path" : "http://localhost/Firefox-OS-Boilerplate-App-template/package/",
+    "version": "0.1",
+    "developer": {
+        "name": "Arky",
+        "url": "http://playingwithsid.blogspot.com"
+    }
+}
