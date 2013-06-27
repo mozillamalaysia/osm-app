@@ -1,14 +1,13 @@
 .leaflet-control-edit-in-osm {
     background: none repeat scroll 0 0 #F8F8F9;
-    border: 1px solid #888888;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    border-radius: 4px 4px 4px 4px;
+   
 }
 .leaflet-control-edit-in-osm .leaflet-control-edit-in-osm-toggle {
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    height: 24px;
-    width: 24px;
+    height: 22px;
+    width: 22px;
     display: block;
 }
 .leaflet-control-edit-in-osm .leaflet-control-edit-in-osm-toggle {
