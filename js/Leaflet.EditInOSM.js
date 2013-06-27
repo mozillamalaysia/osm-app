@@ -3,6 +3,10 @@ L.Control.EditInOSM = L.Control.extend({
     options: {
         position: "topright",
         editors: {
+	    osm:  { 
+		url: 'http://www.openstreetmap.org/edit',
+		name: "OSM"
+	   },
            iD: {
                 url: 'http://openstreetmap.us/iD/release/#map='
             },
@@ -65,13 +69,11 @@ L.Control.EditInOSM = L.Control.extend({
         return this._map.getBounds();
     },
 
-    get_JOSM_params: function () {
-        var bounds = this.getBounds();
-        return L.Util.getParamString({
-                left: bounds.getNorthWest().lng,
-                right: bounds.getSouthEast().lng,
-                top: bounds.getNorthWest().lat,
-                bottom: bounds.getSouthEast().lat
+    get_osm_params: function () {
+          return L.Util.getParamString({
+                lat: this._map.getCenter().wrap().lat,
+	        lon: this._map.getCenter().wrap().lng,
+                zoom: this._map.getZoom()
         });
 
     },
