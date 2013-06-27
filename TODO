@@ -1,10 +1,21 @@
-* Basic App layout
-* Add leafletjs library
-* Show map 
-* Add install button 
-* Fetch location from device and center map 
-* Notification Splash screen about data 
-* About the app: Dude, Where is my OSM map? and love for opensource
-* OSM editing with .editInOSM plugin -> redirect to http://www.openstreetmap.org/edit?editor=id&lat=51.543&lon=-0.5055&zoom=13
-* Cache tiles locally with .Pouch or .FunctionalTileLayer 
-* Add a POI and submit it to OSM server 
+TODO
+====
+Clean template code and build offline zip archive
+
+Prepare for Mozilla market place deployment. Add a install button?
+
+Edit in OSM icon doesn't work with touch devices (remove :hover)
+
+Use better icon for edit button 
+
+Align edit icon with other icons
+
+Add about app icon and popup icon with text "Dude, Where is my OSM map?" and notification about data use. 
+
+Find better solution for editing OSM maps on small screen devices. 
+1. Redirecting to OSM  (http://www.openstreetmap.org/edit?editor=id&lat=51.543&lon=-0.5055&zoom=13)
+2. Include a minimal UI embedded iD editor
+
+Cache tiles locally with .Pouch or .FunctionalTileLayer 
+
+Add a POI and submit it to OSM server using OSM API 
