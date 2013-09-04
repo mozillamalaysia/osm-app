@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/leaflet.css"/>    
     <link rel="stylesheet" type="text/css" href="css/L.Control.Locate.css"/>
+    <link rel="stylesheet" type="text/css" href="css/l.geosearch.css"/>
+
     <script type="text/javascript" src="js/leaflet.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/L.Control.Locate.js"></script>
+    <script type="text/javascript" src="js/l.control.geosearch.js"></script>
+    <script type="text/javascript" src="js/l.geosearch.provider.openstreetmap.js"></script>
 <style>
   body {
   padding: 0;
@@ -22,8 +27,7 @@
  <div id="map"></div>
  <script>
    var map = L.map('map');
-
-   L.tileLayer('http://{s}.tile.cloudmade.com/b9247333f1e54903a47ecbd67c19cbcc/997/256/{z}/{x}/{y}.png', {
+  L.tileLayer('http://{s}.tile.cloudmade.com/b9247333f1e54903a47ecbd67c19cbcc/997/256/{z}/{x}/{y}.png', {
    maxZoom: 18,
    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>'
    }).addTo(map);
@@ -51,6 +55,11 @@
       'follow': true,
       stopFollowingOnDrag: true
    }).addTo(map);
+
+// Add Geosearch  
+       new L.Control.GeoSearch({
+            provider: new L.GeoSearch.Provider.OpenStreetMap()
+        }).addTo(map);
 
  </script>
 </body>
